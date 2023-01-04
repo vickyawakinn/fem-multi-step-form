@@ -1,0 +1,100 @@
+/* media queries */
+
+@media (min-width: 500px) {
+    #root {
+        width: fit-content;
+    }
+    .App {
+        width: 90vw;
+        min-height: 500px;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        box-shadow: 0 7px 10px 0 lightgrey;
+    }
+    .navigation {
+        height: 100%;
+        flex-basis: 35%;
+        border-radius: 1rem;
+        background-image: url(assets/images/bg-sidebar-desktop.svg);
+        background-size: cover;
+        background-position: top;
+    }
+    .nav-list {
+        display: block;
+        padding-block: 1rem;
+    }
+    .nav-item-index {
+        transform: scale(1);
+    }
+    .nav-item-label {
+        display: block;
+    }
+    .panel {
+        height: 100%;
+        flex-basis: 65%;
+        padding: 0;
+        background-color: var(--white);
+    }
+    .primary {
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        transform: none;
+    }
+    .footer {
+        background-color: transparent;
+    }
+    .thankYou {
+        flex-basis: 65%;
+        height: 100%;
+        justify-content: center;
+        background-color: var(--white);
+    }
+    .thankYou-container {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+}
+@media (min-width: 550px) {
+    .panel {
+        padding-block: 1rem;
+    }
+}
+@media (min-width: 600px) {
+    .App {
+        height: 500px;
+        min-height: unset;
+    }
+    .iconImg {
+        padding-bottom: 3rem;
+    }
+    .selectPlanList {
+        flex-direction: row;
+    }
+    .selectPlanItem {
+        flex-basis: 30%;
+        display: block;
+    }
+}
+@media (min-width: 700px) {
+    .container {
+        padding-inline: 1rem;
+    }
+    .navigation {
+        flex-basis: 30%;
+    }
+    .panel {
+        flex-basis: 70%;
+        padding-inline: 2rem;
+    }
+    .thankYou {
+        flex-basis: 70%;
+    }
+}
