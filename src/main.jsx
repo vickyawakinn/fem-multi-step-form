@@ -5,9 +5,12 @@ import "./index.css";
 import "./mediaQuery.css";
 
 import { BrowserRouter } from "react-router-dom";
+import { DataProvider } from "./data";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
-        <App />
+        <DataProvider>
+            <App />
+        </DataProvider>
     </BrowserRouter>
 );

@@ -106,7 +106,7 @@ p.heavy {
     transition: 0.3s ease;
 }
 .nav-item-index:hover,
-.nav-item-index:active {
+.nav-item-index.selected {
     border-color: var(--light-blue);
     background-color: var(--light-blue);
     color: #000;
@@ -164,7 +164,16 @@ p.heavy {
 .inputs {
     display: flex;
     flex-direction: column;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.85rem;
+}
+.inputs > div {
+    display: flex;
+    justify-content: space-between;
+}
+.invalid-entry {
+    font-size: 0.75rem;
+    color: var(--strawberry-red);
+    visibility: hidden;
 }
 .inputField {
     padding: 0.5rem;
@@ -178,6 +187,13 @@ p.heavy {
 }
 .peronalDetails {
     padding-block: 0.5rem;
+}
+.inputs.invalid > input {
+    position: relative;
+    border: 2px solid var(--strawberry-red);
+}
+.inputs.invalid .invalid-entry {
+    visibility: visible;
 }
 
 /* select plan  */
@@ -277,6 +293,9 @@ p.heavy {
 .addOnsItem.selected .addOnsCheck > img {
     background-color: var(--purplish-blue);
 }
+.addOnsItem > div {
+    user-select: none;
+}
 
 /* summary  */
 
@@ -344,6 +363,13 @@ p.heavy {
 .btn.bold:hover,
 .btn.bold:active {
     background-color: hsl(213, 96%, 35%);
+}
+
+#goBack {
+    visibility: hidden;
+}
+#next.inactive {
+    opacity: 0.5;
 }
 
 /* ============================== Thank You ============================ */
